@@ -4,7 +4,7 @@ A boilerplate backend with typescript and mysql database
 
 ## Built with
 
-- Typescrip
+- Typescript
 
 ## Author
 

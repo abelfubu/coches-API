@@ -16,4 +16,6 @@ app.use(morgan('tiny'));
 app.use('/', indexRouter);
 app.use('/coches', cochesRouter);
 
-app.listen(3000, () => console.log('PORT 3000 ON FIRE!'));
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, () => console.log(`PORT ${PORT} ON FIRE!`));

@@ -7,8 +7,10 @@ const connection = mysql.createConnection({
   database: process.env.DB_DATABASE,
 });
 
-connection.connect(error => {
-  if (!error) console.log('DB running...');
+connection.connect((error) => {
+  if (!error) {
+    console.log('DB running...');
+  }
 });
 
 export default connection;

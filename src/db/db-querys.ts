@@ -5,39 +5,51 @@ export const queryAll = (table: string) => {
     connection.query(
       `SELECT * FROM ${table}`,
       (error: Error, result: Response) => {
-        if (error) reject(error);
-        else resolve(result);
+        if (error) {
+          reject(error);
+        } else {
+          resolve(result);
+        }
       }
     );
   });
 };
 
-export const queryBy = (table: string, query: {}) => {
+export const queryBy = (table: string, query: {}): Promise<any[]> => {
   return new Promise((resolve, reject) => {
-    let sql = `SELECT * FROM ${table} WHERE ?`;
+    const sql = `SELECT * FROM ${table} WHERE ?`;
     connection.query(sql, query, (error, result) => {
-      if (error) reject(error);
-      else resolve(result);
+      if (error) {
+        reject(error);
+      } else {
+        resolve(result);
+      }
     });
   });
 };
 
 export const addNew = (table: string, resource: {}) => {
   return new Promise((resolve, reject) => {
-    let sql = `INSERT INTO ${table} SET ?`;
+    const sql = `INSERT INTO ${table} SET ?`;
     connection.query(sql, resource, (error, result) => {
-      if (error) reject(error);
-      else resolve(result);
+      if (error) {
+        reject(error);
+      } else {
+        resolve(result);
+      }
     });
   });
 };
 
 export const deleteOne = (table: string, id: {}) => {
   return new Promise((resolve, reject) => {
-    let sql = `DELETE FROM ${table} WHERE ?`;
+    const sql = `DELETE FROM ${table} WHERE ?`;
     connection.query(sql, id, (error, result) => {
-      if (error) reject(error);
-      else resolve(result);
+      if (error) {
+        reject(error);
+      } else {
+        resolve(result);
+      }
     });
   });
 };

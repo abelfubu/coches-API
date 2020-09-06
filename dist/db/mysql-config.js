@@ -10,8 +10,9 @@ const connection = mysql_1.default.createConnection({
     password: process.env.DB_PASSWORD,
     database: process.env.DB_DATABASE,
 });
-connection.connect(error => {
-    if (!error)
+connection.connect((error) => {
+    if (!error) {
         console.log('DB running...');
+    }
 });
 exports.default = connection;

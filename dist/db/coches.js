@@ -3,6 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.coches = void 0;
 exports.coches = [
     {
+        id: 1,
         marca: 'VolksWagen',
         color: 'Naranja',
         modelo: 'Escarabajo',
@@ -17,6 +18,7 @@ exports.coches = [
         img: 'https://images.unsplash.com/photo-1489824904134-891ab64532f1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=889&q=80',
     },
     {
+        id: 2,
         marca: 'Renault',
         color: 'Rojo',
         modelo: '4 Caballos',
@@ -31,20 +33,22 @@ exports.coches = [
         img: 'https://static.abc.es/media/MM/2018/04/18/Chiron%20Sport%20-3--kmBF--1979x900@abc.jpg',
     },
     {
+        id: 3,
         marca: 'Citroen',
         color: 'Negro',
-        modelo: '4 Caballos',
+        modelo: 'Dixan',
         puertas: 3,
         tipoDeCoche: 'Turismo',
-        potencia: 220,
-        oferta: true,
-        visible: true,
+        potencia: 125,
+        oferta: false,
+        visible: false,
         vendido: false,
         precio: 54000,
-        rating: 4,
+        rating: 3,
         img: 'https://cdn.autobild.es/sites/navi.axelspringer.es/public/styles/1200/public/media/image/2020/07/7-cochazos-construir-garaje-2006491.jpg?itok=oWfMGqgS',
     },
     {
+        id: 4,
         marca: 'Porsche',
         color: 'Gris',
         modelo: 'Flipa mandarinas',
@@ -59,6 +63,7 @@ exports.coches = [
         img: 'https://64.media.tumblr.com/408b138e6cb85186695858ef92a9fae4/tumblr_n0hlhvMNlJ1ts4lfao1_1280.jpg',
     },
     {
+        id: 5,
         marca: 'Chevrolet',
         color: 'Amarillo',
         modelo: 'Corvette',

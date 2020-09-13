@@ -22,5 +22,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = require("express");
 const viajesController = __importStar(require("../controllers/viajes-controller"));
 const router = express_1.Router();
-router.get('/', viajesController.getAll).get('/:id', viajesController.getOne);
+router
+    .get('/', viajesController.getAll)
+    .get('/:id', viajesController.getOne)
+    .post('/', viajesController.addOne);
 exports.default = router;

@@ -20,7 +20,7 @@ var __importStar = (this && this.__importStar) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = require("express");
-const cochesController = __importStar(require("../controllers/coches-controller"));
+const viajesController = __importStar(require("../controllers/viajes-controller"));
 const router = express_1.Router();
-router.get('/', cochesController.getAll).get('/:id', cochesController.getOne);
+router.get('/', viajesController.getAll).get('/:id', viajesController.getOne);
 exports.default = router;

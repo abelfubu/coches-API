@@ -1,10 +1,10 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.getOne = exports.getAll = void 0;
-const coches_1 = require("../db/coches");
+const viajes_1 = require("../db/viajes");
 exports.getAll = (req, res) => {
     try {
-        res.status(200).json({ coches: coches_1.coches });
+        res.status(200).json({ viajes: viajes_1.viajes });
     }
     catch (error) {
         res.status(400).json({ message: 'Something went wrong...' });
@@ -12,7 +12,7 @@ exports.getAll = (req, res) => {
 };
 exports.getOne = (req, res) => {
     try {
-        const result = coches_1.coches.filter((coche) => coche.id === +req.params.id);
+        const result = viajes_1.viajes.filter((viaje) => viaje.id === +req.params.id);
         res.status(200).json({ result });
     }
     catch (error) {

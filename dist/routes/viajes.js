@@ -25,5 +25,6 @@ const router = express_1.Router();
 router
     .get('/', viajesController.getAll)
     .get('/:id', viajesController.getOne)
-    .post('/', viajesController.addOne);
+    .post('/', viajesController.addOne)
+    .put('/', viajesController.updateOne);
 exports.default = router;

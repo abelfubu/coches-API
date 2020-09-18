@@ -24,8 +24,8 @@ const viajesController = __importStar(require("../controllers/viajes-controller"
 const router = express_1.Router();
 router
     .get('/', viajesController.getAll)
-    .get('/:id', viajesController.getOne)
-    .delete('/:id', viajesController.deleteOne)
     .post('/', viajesController.addOne)
-    .put('/', viajesController.updateOne);
+    .get('/:id', viajesController.getOne)
+    .put('/:id', viajesController.updateOne)
+    .delete('/:id', viajesController.deleteOne);
 exports.default = router;

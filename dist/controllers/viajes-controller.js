@@ -33,10 +33,10 @@ exports.addOne = (req, res) => {
 };
 exports.updateOne = (req, res) => {
     try {
-        if (req.body) {
-            const { id } = req.body;
+        if (req.params.id) {
+            const { id } = req.params;
             const newViaje = { ...req.body };
-            viajes_1.viajes.splice(id - 1, 1, req.body);
+            viajes_1.viajes.splice(+id - 1, 1, req.body);
             res.status(200).json(newViaje);
         }
     }
@@ -46,9 +46,9 @@ exports.updateOne = (req, res) => {
 };
 exports.deleteOne = (req, res) => {
     try {
-        if (req.body) {
-            const { id } = req.body;
-            const deleted = viajes_1.viajes.splice(id - 1, 1);
+        if (req.params.id) {
+            const { id } = req.params;
+            const deleted = viajes_1.viajes.splice(+id - 1, 1);
             res.status(200).json(deleted);
         }
     }

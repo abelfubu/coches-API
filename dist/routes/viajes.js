@@ -25,7 +25,7 @@ const router = express_1.Router();
 router
     .get('/', viajesController.getAll)
     .get('/:id', viajesController.getOne)
-    .delete(':id', viajesController.deleteOne)
+    .delete('/:id', viajesController.deleteOne)
     .post('/', viajesController.addOne)
     .put('/', viajesController.updateOne);
 exports.default = router;

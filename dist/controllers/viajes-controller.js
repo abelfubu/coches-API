@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.updateOne = exports.addOne = exports.getOne = exports.getAll = void 0;
+exports.deleteOne = exports.updateOne = exports.addOne = exports.getOne = exports.getAll = void 0;
 const viajes_1 = require("../db/viajes");
 exports.getAll = (req, res) => {
     try {
@@ -36,6 +36,18 @@ exports.updateOne = (req, res) => {
         if (req.body) {
             const { id } = req.body;
             viajes_1.viajes.splice(id - 1, 1, req.body);
+            res.status(200).json(req.body);
+        }
+    }
+    catch (error) {
+        res.status(400).json({ message: 'Something went wrong...' });
+    }
+};
+exports.deleteOne = (req, res) => {
+    try {
+        if (req.body) {
+            const { id } = req.body;
+            viajes_1.viajes.splice(id - 1, 1);
             res.status(200).json(req.body);
         }
     }

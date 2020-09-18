@@ -4,7 +4,7 @@ exports.updateOne = exports.addOne = exports.getOne = exports.getAll = void 0;
 const viajes_1 = require("../db/viajes");
 exports.getAll = (req, res) => {
     try {
-        res.status(200).json({ viajes: viajes_1.viajes });
+        res.status(200).json(viajes_1.viajes);
     }
     catch (error) {
         res.status(400).json({ message: 'Something went wrong...' });
@@ -13,7 +13,7 @@ exports.getAll = (req, res) => {
 exports.getOne = (req, res) => {
     try {
         const result = viajes_1.viajes.filter((viaje) => viaje.id === +req.params.id);
-        res.status(200).json({ result });
+        res.status(200).json(result[0]);
     }
     catch (error) {
         res.status(400).json({ message: 'Something went wrong...' });
@@ -24,7 +24,7 @@ exports.addOne = (req, res) => {
         if (req.body) {
             req.body.id = viajes_1.viajes.length + 1;
             viajes_1.viajes.push(req.body);
-            res.status(200).json({ success: true, id: req.body.id });
+            res.status(200).json(req.body);
         }
     }
     catch (error) {
@@ -36,7 +36,7 @@ exports.updateOne = (req, res) => {
         if (req.body) {
             const { id } = req.body;
             viajes_1.viajes.splice(id - 1, 1, req.body);
-            res.status(200).json({ success: true, id: req.body.id });
+            res.status(200).json(req.body);
         }
     }
     catch (error) {

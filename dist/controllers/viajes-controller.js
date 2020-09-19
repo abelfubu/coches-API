@@ -36,7 +36,8 @@ exports.updateOne = (req, res) => {
         if (req.params.id) {
             const { id } = req.params;
             const newViaje = { ...req.body };
-            viajes_1.viajes.splice(+id - 1, 1, req.body);
+            const pos = viajes_1.viajes.findIndex((viaje) => viaje.id === +id);
+            viajes_1.viajes.splice(pos, 1, req.body);
             res.status(200).json(newViaje);
         }
     }
@@ -48,7 +49,9 @@ exports.deleteOne = (req, res) => {
     try {
         if (req.params.id) {
             const { id } = req.params;
-            const deleted = viajes_1.viajes.splice(+id - 1, 1);
+            const deleted = viajes_1.viajes.find((viaje) => viaje.id === +id);
+            const pos = viajes_1.viajes.findIndex((viaje) => viaje.id === +id);
+            viajes_1.viajes.splice(pos, 1);
             res.status(200).json(deleted);
         }
     }

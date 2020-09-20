@@ -6,53 +6,17 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.deleteOne = exports.addNew = exports.queryBy = exports.queryAll = void 0;
 const mysql_config_1 = __importDefault(require("./mysql-config"));
 exports.queryAll = (table) => {
-    return new Promise((resolve, reject) => {
-        mysql_config_1.default.query(`SELECT * FROM ${table}`, (error, result) => {
-            if (error) {
-                reject(error);
-            }
-            else {
-                resolve(result);
-            }
-        });
-    });
+    return mysql_config_1.default.query(`SELECT * FROM ${table}`);
 };
 exports.queryBy = (table, query) => {
-    return new Promise((resolve, reject) => {
-        const sql = `SELECT * FROM ${table} WHERE ?`;
-        mysql_config_1.default.query(sql, query, (error, result) => {
-            if (error) {
-                reject(error);
-            }
-            else {
-                resolve(result);
-            }
-        });
-    });
+    const sql = `SELECT * FROM ${table} WHERE ?`;
+    return mysql_config_1.default.query(sql, query);
 };
 exports.addNew = (table, resource) => {
-    return new Promise((resolve, reject) => {
-        const sql = `INSERT INTO ${table} SET ?`;
-        mysql_config_1.default.query(sql, resource, (error, result) => {
-            if (error) {
-                reject(error);
-            }
-            else {
-                resolve(result);
-            }
-        });
-    });
+    const sql = `INSERT INTO ${table} SET ?`;
+    return mysql_config_1.default.query(sql, resource);
 };
 exports.deleteOne = (table, id) => {
-    return new Promise((resolve, reject) => {
-        const sql = `DELETE FROM ${table} WHERE ?`;
-        mysql_config_1.default.query(sql, id, (error, result) => {
-            if (error) {
-                reject(error);
-            }
-            else {
-                resolve(result);
-            }
-        });
-    });
+    const sql = `DELETE FROM ${table} WHERE ?`;
+    return mysql_config_1.default.query(sql, id);
 };

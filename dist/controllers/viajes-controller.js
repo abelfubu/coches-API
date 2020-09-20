@@ -1,8 +1,16 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.deleteOne = exports.updateOne = exports.addOne = exports.getOne = exports.getAll = void 0;
+exports.deleteOne = exports.updateOne = exports.addOne = exports.getOne = exports.getSpecial = exports.getAll = void 0;
 const viajes_1 = require("../db/viajes");
 exports.getAll = (req, res) => {
+    try {
+        res.status(200).json(viajes_1.viajes);
+    }
+    catch (error) {
+        res.status(400).json({ message: 'Something went wrong...' });
+    }
+};
+exports.getSpecial = (req, res) => {
     try {
         res.status(200).json(viajes_1.viajes);
     }

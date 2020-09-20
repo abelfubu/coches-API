@@ -34,7 +34,8 @@ exports.signup = async (req, res) => {
         const userExist = await db.queryBy('user', {
             email: req.body.email,
         });
-        if (userExist.length) {
+        console.log(userExist);
+        if (userExist[0].length) {
             return res.status(401).json({
                 message: 'A user with the given email already exist in our Db',
             });

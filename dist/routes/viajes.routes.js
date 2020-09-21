@@ -28,9 +28,9 @@ const viajesController = __importStar(require("../controllers/viajes-controller"
 const router = express_1.Router();
 router
     .get('/', viajesController.getAll)
-    .post('/', viajesController.addOne)
+    .post('/', passport_1.default.authenticate('jwt', { session: false }), viajesController.addOne)
     .get('/special', passport_1.default.authenticate('jwt', { session: false }), viajesController.getSpecial)
-    .get('/:id', viajesController.getOne)
-    .put('/:id', viajesController.updateOne)
-    .delete('/:id', viajesController.deleteOne);
+    .get('/:id', passport_1.default.authenticate('jwt', { session: false }), viajesController.getOne)
+    .put('/:id', passport_1.default.authenticate('jwt', { session: false }), viajesController.updateOne)
+    .delete('/:id', passport_1.default.authenticate('jwt', { session: false }), viajesController.deleteOne);
 exports.default = router;

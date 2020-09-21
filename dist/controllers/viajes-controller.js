@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.deleteOne = exports.updateOne = exports.addOne = exports.getOne = exports.getSpecial = exports.getAll = void 0;
+const uuid_1 = require("uuid");
 const viajes_1 = require("../db/viajes");
 exports.getAll = (req, res) => {
     try {
@@ -30,7 +31,7 @@ exports.getOne = (req, res) => {
 exports.addOne = (req, res) => {
     try {
         if (req.body) {
-            req.body.id = viajes_1.viajes.length + 1;
+            req.body.id = uuid_1.v4();
             viajes_1.viajes.push(req.body);
             res.status(200).json(req.body);
         }

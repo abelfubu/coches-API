@@ -59,8 +59,8 @@ exports.login = async (req, res) => {
     }
     try {
         const user = await db.queryBy('user', { email: req.body.email });
-        console.log(user[0]);
-        if (!user[0].length) {
+        console.log(user[0][0].password);
+        if (!user[0].length || user[0][0].password !== req.body.password) {
             return res
                 .status(401)
                 .json({ message: 'Email or password is not correct' });

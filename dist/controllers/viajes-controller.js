@@ -21,8 +21,8 @@ exports.getSpecial = (req, res) => {
 };
 exports.getOne = (req, res) => {
     try {
-        const result = viajes_1.viajes.filter((viaje) => viaje.id === +req.params.id);
-        res.status(200).json(result[0]);
+        const result = viajes_1.viajes.find((viaje) => viaje.id === req.params.id);
+        res.status(200).json(result);
     }
     catch (error) {
         res.status(400).json({ message: 'Something went wrong...' });
@@ -45,7 +45,7 @@ exports.updateOne = (req, res) => {
         if (req.params.id) {
             const { id } = req.params;
             const newViaje = { ...req.body };
-            const pos = viajes_1.viajes.findIndex((viaje) => viaje.id === +id);
+            const pos = viajes_1.viajes.findIndex((viaje) => viaje.id === id);
             viajes_1.viajes.splice(pos, 1, req.body);
             res.status(200).json(newViaje);
         }
@@ -58,8 +58,8 @@ exports.deleteOne = (req, res) => {
     try {
         if (req.params.id) {
             const { id } = req.params;
-            const deleted = viajes_1.viajes.find((viaje) => viaje.id === +id);
-            const pos = viajes_1.viajes.findIndex((viaje) => viaje.id === +id);
+            const deleted = viajes_1.viajes.find((viaje) => viaje.id === id);
+            const pos = viajes_1.viajes.findIndex((viaje) => viaje.id === id);
             viajes_1.viajes.splice(pos, 1);
             res.status(200).json(deleted);
         }

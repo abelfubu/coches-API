@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.viajes = void 0;
 exports.viajes = [
     {
-        id: 1,
+        id: '1',
         nombre: 'Caribe',
         tipo: 'Aventura',
         duracion: 15,
@@ -15,7 +15,7 @@ exports.viajes = [
         rating: 3,
     },
     {
-        id: 2,
+        id: '2',
         nombre: 'Místico',
         tipo: 'Descubrimiento',
         duracion: 18,
@@ -27,7 +27,7 @@ exports.viajes = [
         rating: 2,
     },
     {
-        id: 3,
+        id: '3',
         nombre: 'Route 66',
         tipo: 'Drogas y alcohol',
         duracion: 11,
@@ -39,7 +39,7 @@ exports.viajes = [
         rating: 5,
     },
     {
-        id: 4,
+        id: '4',
         nombre: 'Sudeste Asiatico',
         tipo: 'Tour',
         duracion: 17,
@@ -51,7 +51,7 @@ exports.viajes = [
         rating: 4,
     },
     {
-        id: 5,
+        id: '5',
         nombre: 'Siberia',
         tipo: 'Pasar frío',
         duracion: 22,
@@ -64,7 +64,7 @@ exports.viajes = [
         rating: 4,
     },
     {
-        id: 6,
+        id: '6',
         nombre: 'Montañas',
         tipo: 'Descubrimiento',
         duracion: 13,
@@ -76,7 +76,7 @@ exports.viajes = [
         rating: 4,
     },
     {
-        id: 7,
+        id: '7',
         nombre: 'Tutan Come On',
         tipo: 'Tour',
         duracion: 40,
@@ -88,7 +88,7 @@ exports.viajes = [
         rating: 2,
     },
     {
-        id: 8,
+        id: '8',
         nombre: 'Otomano',
         tipo: 'Tour',
         duracion: 33,
@@ -100,7 +100,7 @@ exports.viajes = [
         rating: 5,
     },
     {
-        id: 9,
+        id: '9',
         nombre: 'Machu Pichu',
         tipo: 'Aventura',
         duracion: 78,
@@ -112,7 +112,7 @@ exports.viajes = [
         rating: 4,
     },
     {
-        id: 10,
+        id: '10',
         nombre: 'Akuna Matata',
         tipo: 'Aventura',
         duracion: 12,
@@ -124,7 +124,7 @@ exports.viajes = [
         rating: 2,
     },
     {
-        id: 11,
+        id: '11',
         nombre: 'La Gran Muralla',
         tipo: 'Descubrimiento',
         duracion: 30,
@@ -136,7 +136,7 @@ exports.viajes = [
         rating: 4,
     },
     {
-        id: 12,
+        id: '12',
         nombre: 'Guacamole',
         tipo: 'Drogas y alcohol',
         duracion: 11,

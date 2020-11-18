@@ -22,7 +22,7 @@ exports.addOne = (req, res) => {
   try {
     if (req.body) {
       req.body.id = uuid_2.v4();
-      coches_1.viajes.push(req.body);
+      coches_1.push(req.body);
       res.status(200).json(req.body);
     }
   } catch (error) {
@@ -33,10 +33,10 @@ exports.updateOne = (req, res) => {
   try {
     if (req.params.id) {
       const { id } = req.params;
-      const newViaje = { ...req.body };
-      const pos = coches_1.viajes.findIndex(viaje => viaje.id === id);
-      coches_1.viajes.splice(pos, 1, req.body);
-      res.status(200).json(newViaje);
+      const newCoche = { ...req.body };
+      const pos = coches_1.findIndex(coche => coche.id === id);
+      coches_1.splice(pos, 1, req.body);
+      res.status(200).json(newCoche);
     }
   } catch (error) {
     res.status(400).json({ message: 'Something went wrong...' });
@@ -46,9 +46,9 @@ exports.deleteOne = (req, res) => {
   try {
     if (req.params.id) {
       const { id } = req.params;
-      const deleted = coches_1.viajes.find(viaje => viaje.id === id);
-      const pos = coches_1.viajes.findIndex(viaje => viaje.id === id);
-      coches_1.viajes.splice(pos, 1);
+      const deleted = coches_1.find(coche => coche.id === id);
+      const pos = coches_1.findIndex(coche => coche.id === id);
+      coches_1.splice(pos, 1);
       res.status(200).json(deleted);
     }
   } catch (error) {

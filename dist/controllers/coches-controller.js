@@ -26,7 +26,7 @@ exports.addOne = (req, res) => {
       res.status(200).json(req.body);
     }
   } catch (error) {
-    res.status(400).json({ message: 'Something went wrong...' });
+    res.status(400).json({ message: 'Something went wrong...', error });
   }
 };
 exports.updateOne = (req, res) => {

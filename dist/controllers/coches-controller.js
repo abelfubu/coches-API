@@ -12,7 +12,7 @@ exports.getAll = (req, res) => {
 };
 exports.getOne = (req, res) => {
   try {
-    const result = coches_1.coches.filter(coche => coche.id === req.params.id);
+    const result = coches_1.coches.filter(coche => coche.id == req.params.id);
     res.status(200).json(result);
   } catch (error) {
     res.status(400).json({ message: 'Something went wrong...' });

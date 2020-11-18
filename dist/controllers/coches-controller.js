@@ -2,6 +2,7 @@
 Object.defineProperty(exports, '__esModule', { value: true });
 exports.getOne = exports.getAll = void 0;
 const coches_1 = require('../db/coches');
+const uuid_2 = require('uuid');
 exports.getAll = (req, res) => {
   try {
     res.status(200).json(coches_1.coches);
@@ -20,7 +21,7 @@ exports.getOne = (req, res) => {
 exports.addOne = (req, res) => {
   try {
     if (req.body) {
-      req.body.id = uuid_1.v4();
+      req.body.id = uuid_2.v4();
       coches_1.viajes.push(req.body);
       res.status(200).json(req.body);
     }

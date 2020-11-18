@@ -1,0 +1,26 @@
+@url = https://api-coches.herokuapp.com/cars/
+
+### 
+GET {{url}}
+
+###
+GET {{url}}1
+
+###
+POST {{url}}
+Content-Type: application/json
+
+{
+  "make": "VolksWagen",
+  "color": "Orange",
+  "model": "Beetle",
+  "doors": 3,
+  "type": "Sport",
+  "engineHp": 200,
+  "discount": false,
+  "visible": true,
+  "available": true,
+  "price": 24000,
+  "rating": 5,
+  "img": "https://images.unsplash.com/photo-1489824904134-891ab64532f1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=889&q=80"
+}

@@ -33,7 +33,7 @@ exports.updateOne = (req, res) => {
   try {
     if (req.params.id) {
       const { id } = req.params;
-      const newCoche = { ...req.body };
+      const newCoche = { id, ...req.body };
       const pos = coches_1.coches.findIndex(coche => coche.id === id);
       coches_1.coches.splice(pos, 1, req.body);
       res.status(200).json(newCoche);

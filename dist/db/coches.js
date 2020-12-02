@@ -16,6 +16,10 @@ exports.coches = [
     available: true,
     price: 24000,
     rating: 5,
+    owners: [
+      { id: 'lsdf-asdñlfkjalkj-sñoasdf', name: 'Peter Parker' },
+      { id: 'lsdf-asdñlfasdfk4-sñoasdf', name: 'Bill Evans' },
+    ],
     img:
       'https://images.unsplash.com/photo-1489824904134-891ab64532f1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=889&q=80',
   },
@@ -33,7 +37,9 @@ exports.coches = [
     available: true,
     price: 54000,
     rating: 3,
-    img: 'https://static.abc.es/media/MM/2018/04/18/Chiron%20Sport%20-3--kmBF--1979x900@abc.jpg',
+    owners: [{ id: 'lsdf-asdñlfkjalkj-sñoasdf', name: 'Thelonious Monk' }],
+    img:
+      'https://static.abc.es/media/MM/2018/04/18/Chiron%20Sport%20-3--kmBF--1979x900@abc.jpg',
   },
   {
     id: '3',
@@ -49,6 +55,11 @@ exports.coches = [
     available: false,
     price: 54000,
     rating: 3,
+    owners: [
+      { id: 'lsdf-asdñlfkjalkj-sñoas4f', name: 'Miles Davis' },
+      { id: 'lsdf-asd23fkjalkj-sñoasdf', name: 'Louis Armstrong' },
+      { id: 'lsdf-asd2666jalkj-sñoasdf', name: 'Duke Ellington' },
+    ],
     img:
       'https://cdn.autobild.es/sites/navi.axelspringer.es/public/styles/1200/public/media/image/2020/07/7-cochazos-construir-garaje-2006491.jpg?itok=oWfMGqgS',
   },
@@ -66,6 +77,7 @@ exports.coches = [
     available: true,
     price: 128000,
     rating: 1,
+    owners: [{ id: 'lsdf-asdñlfkjalkj-1993', name: 'Dizzy Gillespie' }],
     img:
       'https://64.media.tumblr.com/408b138e6cb85186695858ef92a9fae4/tumblr_n0hlhvMNlJ1ts4lfao1_1280.jpg',
   },
@@ -83,6 +95,12 @@ exports.coches = [
     available: true,
     price: 324000,
     rating: 5,
+    owners: [
+      { id: 'lsdf-asdñlfkjalkj-sño1996', name: 'Count Basie' },
+      { id: 'lsdf-asdñlfkjalkj-sño1959', name: 'Billie Holiday' },
+      { id: 'lsdf-asdñlfkjalkj-sño1996', name: 'Ella Fitzgerald' },
+      { id: 'lsdf-asdñlfkjalkj-sño1967', name: 'John Coltrane' },
+    ],
     img: 'https://i.pinimg.com/originals/66/10/ec/6610ecf455284eee4b41faf84be330a0.jpg',
   },
   {
@@ -99,6 +117,10 @@ exports.coches = [
     available: true,
     price: 150000,
     rating: 3,
+    owners: [
+      { id: 'lsdf-asdñlfkjalkj-sño1979', name: 'Charles Mingus' },
+      { id: 'lsdf-asdñlfkjalkj-sño1988', name: 'Chet Baker' },
+    ],
     img: 'https://buzzdrives.com/wp-content/uploads/2016/05/cars-that-nobody-buys-3.jpg',
   },
   {
@@ -115,6 +137,7 @@ exports.coches = [
     available: true,
     price: 423000,
     rating: 4,
+    owners: [{ id: 'lsdf-asdñlfkjalkj-sño202x', name: 'Chick Corea' }],
     img: 'https://buzzdrives.com/wp-content/uploads/2016/05/cars-that-nobody-buys-11.jpg',
   },
   {
@@ -131,6 +154,10 @@ exports.coches = [
     available: true,
     price: 500000,
     rating: 5,
+    owners: [
+      { id: 'lsdf-asdñlfkjalkj-sñoax220', name: 'Herbie Hancock' },
+      { id: 'lsdf-asdñlfkjalkj-sñoxx220', name: 'Sonny Rollins' },
+    ],
     img: 'https://buzzdrives.com/wp-content/uploads/2016/05/cars-that-nobody-buys-12.jpg',
   },
 ];

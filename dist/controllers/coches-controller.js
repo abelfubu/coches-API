@@ -34,13 +34,8 @@ exports.updateOne = (req, res) => {
     if (req.params.id) {
       const { id } = req.params;
       const newCoche = { ...req.body };
-      coches_1.coches.forEach(coche => {
-        if (coche.id === id) {
-          coche = { ...req.body, ...coche };
-        }
-      });
-      // const pos = coches_1.coches.findIndex(coche => coche.id === id);
-      // coches_1.coches.splice(pos, 1, req.body);
+      const pos = coches_1.coches.findIndex(coche => coche.id === id);
+      coches_1.coches.splice(pos, 1, req.body);
       res.status(200).json(newCoche);
     }
   } catch (error) {

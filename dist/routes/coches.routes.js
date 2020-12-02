@@ -44,6 +44,6 @@ router
   .get('/', cochesController.getAll)
   .get('/:id', cochesController.getOne)
   .post('/', cochesController.addOne)
-  .patch('/:id', cochesController.updateOne)
+  .put('/:id', cochesController.updateOne)
   .delete('/:id', cochesController.deleteOne);
 exports.default = router;

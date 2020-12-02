@@ -36,7 +36,7 @@ exports.updateOne = (req, res) => {
       const newCoche = { ...req.body };
       coches_1.coches.forEach(coche => {
         if (coche.id === id) {
-          coche = { ...coche, ...req.body };
+          coche = { ...req.body, ...coche };
         }
       });
       // const pos = coches_1.coches.findIndex(coche => coche.id === id);

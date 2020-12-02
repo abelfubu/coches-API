@@ -35,7 +35,7 @@ exports.updateOne = (req, res) => {
       const { id } = req.params;
       const newCoche = { ...req.body };
       coches_1.coches.forEach(coche => {
-        if ((coche.id = id)) {
+        if (coche.id === id) {
           coche = { ...coche, ...req.body };
         }
       });
